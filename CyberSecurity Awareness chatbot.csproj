@@ -49,6 +49,7 @@
     <Compile Include="ChatbotResponses.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SentimentHelper.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="VoiceGreeting.cs" />
   </ItemGroup>
