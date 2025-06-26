@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Speech.Synthesis;
-using System.Threading;
-using CyberSecurity_Awareness_chatbot;
+using System.Windows.Forms;
 
-namespace CyberSecurity_Awareness_Chatbot
+namespace CyberSecurity_Awareness_chatbot
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            Console.Title = "CyberSecurity Awareness Chatbot";  // Set Console Title
-            ASCIIArt.ShowLogo();       // Show ASCII Logo
-            VoiceGreeting.PlayGreeting();  // Play Voice Greeting
-            Chatbot.StartChat();       // Start Chatbot Interaction
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new AssistantForm());
         }
     }
 }
