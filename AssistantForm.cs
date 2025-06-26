@@ -97,6 +97,7 @@ namespace CyberSecurity_Awareness_chatbot
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add Task";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // taskList
             // 
@@ -133,6 +134,28 @@ namespace CyberSecurity_Awareness_chatbot
         private void AssistantForm_Load(object sender, EventArgs e)
         {
 
+        }
+        private List<string> taskLog = new List<string>();
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            string taskTitle = txtTask.Text.Trim();
+            string description = txtDesc.Text.Trim();
+            DateTime reminderDate = dtReminder.Value;
+
+            if (string.IsNullOrEmpty(taskTitle))
+            {
+                MessageBox.Show("Please enter a task title.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string taskSummary = $"{taskTitle} - {description} (Due: {reminderDate.ToShortDateString()})";
+            taskLog.Add(taskSummary);
+            taskList.Items.Add(taskSummary);
+
+            // Optional: Clear input fields after adding
+            txtTask.Clear();
+            txtDesc.Clear();
+            dtReminder.Value = DateTime.Now;
         }
     }
 }
