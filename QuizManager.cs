@@ -1,49 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CyberSecurity_Awareness_Chatbot;
 
 namespace CyberSecurity_Awareness_chatbot
 {
     public class QuizManager
     {
-        private List<QuizQuestion> questions;
-        private int currentIndex;
+        private readonly List<QuizQuestion> _questions;
+        private int _currentIndex;
+
         public int Score { get; private set; }
+        public int TotalQuestions => _questions.Count;
+        public int CurrentQuestionIndex => _currentIndex + 1;
+        public bool IsQuizCompleted => _currentIndex >= _questions.Count;
 
         public QuizManager()
         {
-            questions = QuizData.GetQuestions();
-            currentIndex = 0;
+            _questions = QuizData.GetQuestions() ?? new List<QuizQuestion>();
+            _currentIndex = 0;
             Score = 0;
         }
 
         public QuizQuestion GetCurrentQuestion()
         {
-            return questions[currentIndex];
+            if (!IsQuizCompleted)
+                return _questions[_currentIndex];
+            else
+                return null;
         }
 
         public bool CheckAnswer(string selectedOption)
         {
-            bool isCorrect = selectedOption == questions[currentIndex].CorrectOption;
+            if (IsQuizCompleted) return false;
+
+            bool isCorrect = string.Equals(
+                selectedOption,
+                _questions[_currentIndex].CorrectOption,
+                StringComparison.OrdinalIgnoreCase
+            );
+
             if (isCorrect) Score++;
             return isCorrect;
         }
 
         public bool HasNextQuestion()
         {
-            return currentIndex < questions.Count - 1;
+            return _currentIndex < _questions.Count - 1;
         }
 
         public void MoveToNext()
         {
             if (HasNextQuestion())
-                currentIndex++;
+                _currentIndex++;
         }
-
-        public int TotalQuestions => questions.Count;
-        public int CurrentQuestionIndex => currentIndex + 1;
     }
 }

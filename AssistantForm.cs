@@ -37,6 +37,8 @@ namespace CyberSecurity_Awareness_chatbot
             this.dtReminder = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.taskList = new System.Windows.Forms.ListBox();
+            this.btnOpenQuiz = new System.Windows.Forms.Button();
+            this.btnCloseQuiz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTask
@@ -108,9 +110,31 @@ namespace CyberSecurity_Awareness_chatbot
             this.taskList.Size = new System.Drawing.Size(371, 84);
             this.taskList.TabIndex = 7;
             // 
+            // btnOpenQuiz
+            // 
+            this.btnOpenQuiz.Location = new System.Drawing.Point(620, 323);
+            this.btnOpenQuiz.Name = "btnOpenQuiz";
+            this.btnOpenQuiz.Size = new System.Drawing.Size(75, 23);
+            this.btnOpenQuiz.TabIndex = 8;
+            this.btnOpenQuiz.Text = "Open Cybersecurity Quiz";
+            this.btnOpenQuiz.UseVisualStyleBackColor = true;
+            this.btnOpenQuiz.Click += new System.EventHandler(this.btnOpenQuiz_Click);
+            // 
+            // btnCloseQuiz
+            // 
+            this.btnCloseQuiz.Location = new System.Drawing.Point(620, 358);
+            this.btnCloseQuiz.Name = "btnCloseQuiz";
+            this.btnCloseQuiz.Size = new System.Drawing.Size(75, 23);
+            this.btnCloseQuiz.TabIndex = 9;
+            this.btnCloseQuiz.Text = "Close Cybersecurity Quiz";
+            this.btnCloseQuiz.UseVisualStyleBackColor = true;
+            this.btnCloseQuiz.Click += new System.EventHandler(this.btnCloseQuiz_Click);
+            // 
             // AssistantForm
             // 
             this.ClientSize = new System.Drawing.Size(744, 393);
+            this.Controls.Add(this.btnCloseQuiz);
+            this.Controls.Add(this.btnOpenQuiz);
             this.Controls.Add(this.taskList);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtReminder);
@@ -156,6 +180,19 @@ namespace CyberSecurity_Awareness_chatbot
             txtTask.Clear();
             txtDesc.Clear();
             dtReminder.Value = DateTime.Now;
+        }
+
+        private void btnOpenQuiz_Click(object sender, EventArgs e)
+        {
+            QuizForm quizForm = new QuizForm();
+            this.Hide();
+            quizForm.FormClosed += (s, args) => this.Show(); // Reshow AssistantForm when quiz closes
+            quizForm.Show();
+        }
+
+        private void btnCloseQuiz_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -101,6 +101,7 @@
             this.btnSubmitAnswer.TabIndex = 5;
             this.btnSubmitAnswer.Text = "Submit Answer";
             this.btnSubmitAnswer.UseVisualStyleBackColor = true;
+            this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click_1);
             // 
             // lblFeedback
             // 
@@ -127,6 +128,7 @@
             this.btnNextQuestion.TabIndex = 8;
             this.btnNextQuestion.Text = "Next Question";
             this.btnNextQuestion.UseVisualStyleBackColor = true;
+            this.btnNextQuestion.Click += new System.EventHandler(this.btnNextQuestion_Click_1);
             // 
             // btnExitQuiz
             // 
@@ -136,6 +138,7 @@
             this.btnExitQuiz.TabIndex = 9;
             this.btnExitQuiz.Text = "Exit";
             this.btnExitQuiz.UseVisualStyleBackColor = true;
+            this.btnExitQuiz.Click += new System.EventHandler(this.btnExitQuiz_Click_1);
             // 
             // QuizForm
             // 

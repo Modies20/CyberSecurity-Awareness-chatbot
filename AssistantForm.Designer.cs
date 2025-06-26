@@ -10,6 +10,8 @@
         private System.Windows.Forms.DateTimePicker dtReminder;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox taskList;
+        private System.Windows.Forms.Button btnOpenQuiz;
+        private System.Windows.Forms.Button btnCloseQuiz;
         // Existing code remains unchanged
     }
 }

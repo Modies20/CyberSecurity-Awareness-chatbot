@@ -11,7 +11,7 @@ namespace CyberSecurity_Awareness_Chatbot
             {
                 new QuizQuestion
                 {
-                    Text = "What should you do if you receive an email asking for your password?",
+                    QuestionText = "What should you do if you receive an email asking for your password?",
                     OptionA = "Reply with your password",
                     OptionB = "Ignore the email",
                     OptionC = "Report the email as phishing",
@@ -20,7 +20,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "What makes a strong password?",
+                    QuestionText= "What makes a strong password?",
                     OptionA = "Your birthdate",
                     OptionB = "12345678",
                     OptionC = "A mix of letters, numbers, and symbols",
@@ -29,7 +29,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "Which of the following is a form of social engineering?",
+                    QuestionText= "Which of the following is a form of social engineering?",
                     OptionA = "Using antivirus software",
                     OptionB = "Asking for help on a forum",
                     OptionC = "Phishing emails pretending to be your boss",
@@ -38,7 +38,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "How can you verify if a website is secure?",
+                    QuestionText = "How can you verify if a website is secure?",
                     OptionA = "It loads quickly",
                     OptionB = "It has 'https://' and a padlock icon",
                     OptionC = "It looks professional",
@@ -47,7 +47,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "What is phishing?",
+                    QuestionText= "What is phishing?",
                     OptionA = "Catching real fish",
                     OptionB = "Hacking a system physically",
                     OptionC = "Tricking users into giving personal info",
@@ -56,7 +56,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "What should you do before clicking a link in an email?",
+                    QuestionText= "What should you do before clicking a link in an email?",
                     OptionA = "Hover to preview the link",
                     OptionB = "Click immediately",
                     OptionC = "Forward it to friends",
@@ -65,7 +65,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "What does 2FA stand for?",
+                    QuestionText= "What does 2FA stand for?",
                     OptionA = "Two-Factor Authentication",
                     OptionB = "Two-Face Algorithm",
                     OptionC = "Fast Access",
@@ -74,7 +74,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "Why is it unsafe to use public Wi-Fi without a VPN?",
+                    QuestionText = "Why is it unsafe to use public Wi-Fi without a VPN?",
                     OptionA = "It’s too slow",
                     OptionB = "You might get a virus",
                     OptionC = "Your data can be intercepted",
@@ -83,7 +83,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "Which one is the safest method to store passwords?",
+                    QuestionText = "Which one is the safest method to store passwords?",
                     OptionA = "Write on paper",
                     OptionB = "Use a password manager",
                     OptionC = "Text to yourself",
@@ -92,7 +92,7 @@ namespace CyberSecurity_Awareness_Chatbot
                 },
                 new QuizQuestion
                 {
-                    Text = "Which is an example of a safe browsing habit?",
+                    QuestionText= "Which is an example of a safe browsing habit?",
                     OptionA = "Clicking every pop-up",
                     OptionB = "Sharing passwords with friends",
                     OptionC = "Only visiting trusted websites",

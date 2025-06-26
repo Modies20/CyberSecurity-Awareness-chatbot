@@ -8,7 +8,7 @@ namespace CyberSecurity_Awareness_chatbot
 {
     public class QuizQuestion
     {
-        public string Text { get; set; }
+        public string QuestionText { get; set; }
         public string OptionA { get; set; }
         public string OptionB { get; set; }
         public string OptionC { get; set; }
