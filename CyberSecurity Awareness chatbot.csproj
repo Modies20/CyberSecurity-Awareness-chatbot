@@ -35,7 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ASCIIArt.cs" />
+    <Compile Include="AssistantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssistantForm.Designer.cs">
+      <DependentUpon>AssistantForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chatbot.cs" />
     <Compile Include="ChatbotResponses.cs" />
     <Compile Include="Program.cs" />
@@ -55,6 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AssistantForm.resx">
+      <DependentUpon>AssistantForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
